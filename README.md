@@ -74,6 +74,9 @@ python evaluate.py --model mixed.pth --dataset sintel --cuda_corr
 ```
 Note that the above-mentioned (with `--cuda_corr`) code performs on-demand cost computation and does not pre-compute the cost volume, because such computation is very memory intensive on high resolutions.
 
+## License
+- Our code is licensed under the BSD 3-Clause **No Military** License. See [LICENSE](LICENSE).
+- The provided checkpoint may only be used for research and educational purposes. Commercial use is prohibited.
 
 ## Acknowledgement
 
