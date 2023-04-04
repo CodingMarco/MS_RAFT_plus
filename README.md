@@ -76,7 +76,7 @@ Note that the above-mentioned (with `--cuda_corr`) code performs on-demand cost 
 
 ## License
 - Our code is licensed under the BSD 3-Clause **No Military** License. See [LICENSE](LICENSE).
-- The provided checkpoint may only be used for research and educational purposes. Commercial use is prohibited.
+- The provided checkpoint is under the [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) license.
 
 ## Acknowledgement
 
