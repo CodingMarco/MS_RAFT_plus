@@ -13,7 +13,7 @@ import datasets
 from config.config_loader import cpy_eval_args_to_config
 from utils import frame_utils
 from utils.utils import InputPadder, forward_interpolate
-from raft import RAFT
+from MS_RAFT_plus import MS_RAFT_plus
 
 
 @torch.no_grad()
@@ -394,7 +394,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     config = cpy_eval_args_to_config(args)
     print(config)
-    model = torch.nn.DataParallel(RAFT(config))
+    model = torch.nn.DataParallel(MS_RAFT_plus(config))
     model.load_state_dict(torch.load(config["model"]))
 
     model.cuda()

@@ -36,9 +36,9 @@ def downflow(flow, mode='bilinear', factor=0.125):
     return rescaled_flow
 
 
-class RAFT(nn.Module):
+class MS_RAFT_plus(nn.Module):
     def __init__(self, args):
-        super(RAFT, self).__init__()
+        super(MS_RAFT_plus, self).__init__()
         self.args = args
 
         self.correlation_depth = get_correlation_depth(self.args["lookup"])
