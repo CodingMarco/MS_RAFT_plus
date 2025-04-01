@@ -3,7 +3,7 @@
 In this repository we release (for now) the inference code for our work:
 
 > **[MS-RAFT+: High Resolution Multi-Scale RAFT](https://link.springer.com/article/10.1007/s11263-023-01930-7)**<br/>
-> _IJCV 2023_ <br/>
+> _IJCV 2024_ <br/>
 > Azin Jahedi, Maximilian Luz, Marc Rivinius, Lukas Mehl and Andrés Bruhn
 
 > **[High Resolution Multi-Scale RAFT (Robus Vision Challenge 2022)](https://arxiv.org/abs/2210.16900)**<br/>
