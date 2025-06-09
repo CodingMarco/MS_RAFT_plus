@@ -115,7 +115,7 @@ class BottleneckBlock(nn.Module):
 
 
 class BasicEncoder(nn.Module):
-    def __init__(self, output_dim=128, norm_fn='group'):
+    def __init__(self, output_dim, norm_fn='group'):
         super(BasicEncoder, self).__init__()
         self.norm_fn = norm_fn
 
@@ -142,7 +142,7 @@ class BasicEncoder(nn.Module):
         self.layer4 = self._make_layer(160, stride=2)
         self.conv2 = nn.Conv2d(160, output_dim, kernel_size=1)
 
-        self.in_planes = 256 + 128
+        self.in_planes = output_dim + 128
         self.up_layer2 = self._make_layer(128, stride=1)
         self.in_planes = 128 + 96
         self.up_layer1 = self._make_layer(96, stride=1)
@@ -215,7 +215,7 @@ class BasicEncoder(nn.Module):
 
 
 class Basic_Context_Encoder(nn.Module):
-    def __init__(self, output_dim=256, norm_fn='group'):
+    def __init__(self, output_dim, norm_fn='group'):
         super(Basic_Context_Encoder, self).__init__()
         self.norm_fn = norm_fn
         if self.norm_fn == 'group':
@@ -237,11 +237,11 @@ class Basic_Context_Encoder(nn.Module):
 
         self.layer4 = self._make_layer(160, stride=2)           # 160 for group norm instead of 164
         self.conv2 = nn.Conv2d(160, output_dim, kernel_size=1)  # 160 for group norm instead of 164
-        self.in_planes = 256 + 128
+        self.in_planes = output_dim + 128
         self.up_layer2 = self._make_layer(output_dim, stride=1)
-        self.in_planes = 256 + 96
+        self.in_planes = output_dim + 96
         self.up_layer1 = self._make_layer(output_dim, stride=1)
-        self.in_planes = 256 + 64
+        self.in_planes = output_dim + 64
         self.up_layer0 = self._make_layer(output_dim, stride=1)
 
         for m in self.modules():
